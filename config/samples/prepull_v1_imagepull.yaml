@@ -1,0 +1,6 @@
+apiVersion: prepull.cluster.local/v1
+kind: ImagePull
+metadata:
+  name: imagepull
+spec:
+  Namespaces: nil

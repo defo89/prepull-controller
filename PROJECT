@@ -1,0 +1,7 @@
+domain: cluster.local
+repo: github.com/defo89/prepull-controller
+resources:
+- group: prepull
+  kind: ImagePull
+  version: v1
+version: "2"

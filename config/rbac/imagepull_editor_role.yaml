@@ -1,0 +1,24 @@
+# permissions for end users to edit imagepulls.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: imagepull-editor-role
+rules:
+- apiGroups:
+  - prepull.cluster.local
+  resources:
+  - imagepulls
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - prepull.cluster.local
+  resources:
+  - imagepulls/status
+  verbs:
+  - get
